@@ -65,7 +65,7 @@ vars = {
   'markupsafe_revision': 'e582d7f0edb9d67499b0f5abd6ae5550e91da7f2',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'cab3b61b48a954974f23b45e983ff60ce95886f5',
+  'node_revision': '03c0401193a1124ed93a30e7d5547eeaf73613ac',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : '29ac73db520575590c3aceb0a6f1f58dda8934f6',
@@ -182,12 +182,6 @@ hooks = [
         '--landmine-scripts',
         'tools/get_landmines.py',
     ],
-  },
-  {
-    'name': 'generate_node_filelist',
-    'pattern': 'node',
-    'condition': 'not build_upstream_node',
-    'action': ['python3', 'tools/generate_node_files_json.py'],
   },
   {
     # Update the Windows toolchain if necessary.

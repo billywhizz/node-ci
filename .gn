@@ -47,6 +47,7 @@ exec_script_whitelist =
     "//node/deps/uv/unofficial.gni",
     "//node/deps/v8/build_overrides/build.gni",
     "//node/src/inspector/unofficial.gni",
+    "//node_tests/BUILD.gn",
   ]
 
 # The python interpreter to use by default.

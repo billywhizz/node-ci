@@ -28,6 +28,7 @@ def print_landmines():  # pylint: disable=invalid-name
   # landmine.
   # See the Chromium version in src/build/get_landmines.py for usage examples.
   print('Switch to in-tree GN configsXX.')
+  print('Build test with build_addons.py.')
   build_get_landmines.print_landmines()
   return 0
 

@@ -1,0 +1,11 @@
+group("test_all") {
+  testonly = true
+
+  deps = [
+    "//node",
+    "//node:node_cctest",
+    "//node:node_embedtest",
+    "//node:overlapped_checker",
+    "//node_tests",
+  ]
+}

@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': 'd353dfb09522f2b9575cac3c2d0648282876d8ce',
+  'abseil_revision': '2c8fa678c905bd45a81c3aa593900b2f6dd90aa2',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': '8d813a198cb6c99100b2a5eabddd5299a2195ebe',
@@ -37,7 +37,7 @@ vars = {
   'clang_revision': 'bbcb7c6c14fffe3274a20fb4c11e2cb933e0843e',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': 'a5a09d23fa8ffa03d70f0e3c586b926302fa49d9',
+  'depot_tools_revision': '6551a7eb433575243c5212bd2be9ef0930e2dcca',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -53,10 +53,10 @@ vars = {
   'fp16_revision': '0a92994d729ff76a58f692d3028ca1b64b145d91',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': '9756ee7cbaef1b6652065616ab832810a6032bbf',
+  'googletest_revision': 'eff443c6ef5eb6ab598bfaae27f9427fdb4f6af7',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
-  'icu_revision': '51495153362e86d420ef4f4e2cc3149357a9da1d',
+  'icu_revision': '5ae60ba128b3d593307a221dc9322e83b0e9647f',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': 'c9c77525ea20c871a1d4658f8d312b51266d4bad',
@@ -65,16 +65,16 @@ vars = {
   'markupsafe_revision': 'e582d7f0edb9d67499b0f5abd6ae5550e91da7f2',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': '03c0401193a1124ed93a30e7d5547eeaf73613ac',
+  'node_revision': '25196a62ca6ad661c339bfbec7c701d29fed38a5',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : '29ac73db520575590c3aceb0a6f1f58dda8934f6',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': 'e6299cb1410f30f9ee7c1b5709ad8aa6ed9459af',
+  'v8_revision': '7058e46284d281e18725ece23fe8d94e8ec8bec7',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '4b5807f344182fd392849b820642457212618e5f',
+  'zlib_revision': '24c07df5033183efad8607cba62e746bea7180bf',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',

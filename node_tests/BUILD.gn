@@ -9,13 +9,13 @@ group("node_tests") {
   testonly = true
 
   deps = [
-    ":node_test_addons",
-    ":node_test_node_api",
-    ":node_test_js_native_api",
     # The tests files are copied for consumption in node_integration_ng.py.
     # TODO(zcbenz): Remove this after refactoring node_integration_ng.py.
     ":copy_test_common",
     ":copy_test_testpy",
+    ":node_test_addons",
+    ":node_test_js_native_api",
+    ":node_test_node_api",
   ]
 }
 
@@ -32,12 +32,18 @@ action("node_headers") {
     "install",
     "--silent",
     "--headers-only",
-    "--prefix", "/",
-    "--dest-dir", rebase_path("$root_gen_dir/node_headers"),
-    "--config-gypi-path", rebase_path("$root_gen_dir/node/config.gypi"),
-    "--v8-dir", rebase_path(node_v8_path),
-    "--root-dir", rebase_path(node_path),
-    "--stamp", rebase_path(stamp),
+    "--prefix",
+    "/",
+    "--dest-dir",
+    rebase_path("$root_gen_dir/node_headers"),
+    "--config-gypi-path",
+    rebase_path("$root_gen_dir/node/config.gypi"),
+    "--v8-dir",
+    rebase_path(node_v8_path),
+    "--root-dir",
+    rebase_path(node_path),
+    "--stamp",
+    rebase_path(stamp),
   ]
 }
 
@@ -55,7 +61,8 @@ template("copy_dir") {
       rebase_path("//tools/cp_dir.py", root_build_dir),
       rebase_path(invoker.src, root_build_dir),
       rebase_path(invoker.dest, root_build_dir),
-      "--stamp", rebase_path(stamp, root_build_dir),
+      "--stamp",
+      rebase_path(stamp, root_build_dir),
     ]
   }
 }
@@ -72,16 +79,19 @@ template("build_addons") {
 
   action(target_name + "_build") {
     deps = [
-      "$node_path:node",
       ":node_headers",
+      "$node_path:node",
     ]
     script = "//tools/run_with_env.py"
 
     # TODO(zcbenz): Make search_files.py support more extensions.
     inputs = exec_script("$node_path/tools/search_files.py",
-                         [ rebase_path(".", root_build_dir),
-                           rebase_path("$node_path/test/" + invoker.target, root_build_dir),
-                           "cc" ],
+                         [
+                           rebase_path(".", root_build_dir),
+                           rebase_path("$node_path/test/" + invoker.target,
+                                       root_build_dir),
+                           "cc",
+                         ],
                          "list lines")
 
     stamp = "$target_gen_dir/$target_name.stamp"
@@ -90,17 +100,25 @@ template("build_addons") {
     args = [
       rebase_path("$node_path/tools/build_addons.py"),
       rebase_path("$node_path/test/" + invoker.target),
-      "--loglevel", "verbose",
-      "--out-dir", rebase_path(root_build_dir),
-      "--headers-dir", rebase_path("$root_gen_dir/node_headers"),
-      "--stamp", rebase_path(stamp),
+      "--loglevel",
+      "verbose",
+      "--out-dir",
+      rebase_path(root_build_dir),
+      "--headers-dir",
+      rebase_path("$root_gen_dir/node_headers"),
+      "--stamp",
+      rebase_path(stamp),
     ]
 
     if (defined(invoker.skip_tests)) {
-      args += [ "--skip-tests", string_join(",", invoker.skip_tests) ]
+      args += [
+        "--skip-tests",
+        string_join(",", invoker.skip_tests),
+      ]
     }
 
-    clang_path = rebase_path("//third_party/llvm-build/Release+Asserts/bin/clang++")
+    clang_path =
+        rebase_path("//third_party/llvm-build/Release+Asserts/bin/clang++")
     clang_args = ""
     if (false) {  # use_custom_libcxx
       # TODO(zcbenz): Following code makes native addons build with the custom
@@ -113,25 +131,32 @@ template("build_addons") {
       config_site_path = rebase_path("//buildtools/third_party/libc++")
       libcpp_path = rebase_path("//third_party/libc++")
       libcppabi_path = rebase_path("//third_party/libc++abi")
-      clang_args = "-isystem $libcpp_path/src/include " +
-                   "-isystem $libcppabi_path/src/include " +
-                   "-I $config_site_path " +
-                   "-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE " +
-                   "-nostdinc++ " +
-                   "-nostdlib++ "
+      clang_args =
+          "-isystem $libcpp_path/src/include " +
+          "-isystem $libcppabi_path/src/include " + "-I $config_site_path " +
+          "-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE " +
+          "-nostdinc++ " + "-nostdlib++ "
       if (is_mac) {
         mac_sdk_path_abs = rebase_path(mac_sdk_path)
         clang_args += "-isysroot $mac_sdk_path_abs "
       }
     }
-    args += [ "--env", "CXX", "$clang_path $clang_args" ]
+    args += [
+      "--env",
+      "CXX",
+      "$clang_path $clang_args",
+    ]
   }
 
   # The tests files are copied for consumption in node_integration_ng.py.
   # TODO(zcbenz): Remove this after refactoring node_integration_ng.py.
   copy_dir(target_name + "_copy") {
     build_step = invoker.target_name + "_build"
-    deps = [ ":$build_step" ]
+    deps = [
+      ":$build_step",
+      ":node_headers",
+      "$node_path:node",
+    ]
 
     src = "$node_path/test/" + invoker.target
     dest = "$root_gen_dir/node/test/" + invoker.target

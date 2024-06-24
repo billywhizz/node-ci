@@ -87,6 +87,8 @@ default_args = {
   v8_promise_internal_field_count = 1
   v8_use_external_startup_data = false
   v8_enable_javascript_promise_hooks = true
+  v8_array_buffer_internal_field_count = 2
+  v8_array_buffer_view_internal_field_count = 2
   # The napi_create_external_buffer API of Node-API does not support sandbox and
   # tests relying on it would fail with sandbox on.
   v8_enable_sandbox = false

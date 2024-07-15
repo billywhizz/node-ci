@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '30d4d2184638dcc328b79723355c65140cf06e4b',
+  'abseil_revision': '07bb902af4566f75d1bd84bdc831fda4883fed16',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': '8d813a198cb6c99100b2a5eabddd5299a2195ebe',
@@ -37,7 +37,7 @@ vars = {
   'clang_revision': 'bbcb7c6c14fffe3274a20fb4c11e2cb933e0843e',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '840e538154a92136133a68b33a050e99266f40fd',
+  'depot_tools_revision': '791894e4c44fae379faae9b4ca8388577f212a03',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -50,31 +50,31 @@ vars = {
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
   'ninja_version': 'version:2@1.11.1.chromium.6',
 
-  'fp16_revision': '21fcfff7b40f0aa3d77b53d1bd82db876e0bb896',
+  'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'a7f443b80b105f940225332ed3c31f2790092f47',
+  'googletest_revision': '4b21f1abddaf7d28388d7430bab69a81eccb1909',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
-  'icu_revision': '98f2494518c2dbb9c488e83e507b070ea5910e95',
+  'icu_revision': '9408c6fd4a39e6fef0e1c4077602e1c83b15f3fb',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
-  'jinja2_revision': 'c9c77525ea20c871a1d4658f8d312b51266d4bad',
+  'jinja2_revision': '2f6f2ff5e4c1d727377f5e1b9e1903d871f41e74',
   'jinja2_url': 'https://chromium.googlesource.com/chromium/src/third_party/jinja2.git',
 
   'markupsafe_revision': 'e582d7f0edb9d67499b0f5abd6ae5550e91da7f2',
   'markupsafe_url': 'https://chromium.googlesource.com/chromium/src/third_party/markupsafe.git',
 
-  'node_revision': 'd40ebc37fe448a6d143378a7ce870f1e3322b07f',
+  'node_revision': '724d9a556e0fa738cb49ac62d7a35e1470a46444',
   'node_url': 'https://chromium.googlesource.com/external/github.com/v8/node.git',
 
   'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': 'cc21ea84d781e81592b6aa5b6eb7e565596c1511',
+  'v8_revision': 'aac88f733a19ce9a1b1912573ddb7b4317821303',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': '209717dd69cd62f24cbacc4758261ae2dd78cfac',
+  'zlib_revision': 'c2469fdd73f192383d2d94288da0ff5b9a3869f5',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',

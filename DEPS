@@ -50,6 +50,9 @@ vars = {
   # https://chrome-infra-packages.appspot.com/p/infra/3pp/tools/ninja
   'ninja_version': 'version:2@1.11.1.chromium.6',
 
+  'fast_float_revision': 'd7417618f93d2c47e9bbde561510f9fc8bafe003',
+  'fast_float_url': 'https://chromium.googlesource.com/external/github.com/fastfloat/fast_float.git',
+
   'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 

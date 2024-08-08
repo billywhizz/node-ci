@@ -104,7 +104,7 @@ deps = {
   'node': Var('node_url') + '@' + Var('node_revision'),
   'third_party/abseil-cpp': Var('abseil_url') + '@' + Var('abseil_revision'),
   'third_party/depot_tools': Var('depot_tools_url') + '@' + Var('depot_tools_revision'),
-  'third_party/fast_float': Var('fast_float_url') + '@' + Var('fast_float_revision'),
+  'third_party/fast_float/src': Var('fast_float_url') + '@' + Var('fast_float_revision'),
   'third_party/fp16/src': {
     'url': Var('fp16_url') + '@' + Var('fp16_revision'),
     'condition': 'not build_upstream_node',

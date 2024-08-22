@@ -39,6 +39,7 @@ exec_script_whitelist =
     "//node/deps/histogram/unofficial.gni",
     "//node/deps/llhttp/unofficial.gni",
     "//node/deps/nbytes/unofficial.gni",
+    "//node/deps/ncrypto/unofficial.gni",
     "//node/deps/nghttp2/unofficial.gni",
     "//node/deps/ngtcp2/unofficial.gni",
     "//node/deps/openssl/unofficial.gni",

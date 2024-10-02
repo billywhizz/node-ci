@@ -123,7 +123,7 @@ template("build_addons") {
     clang_path =
         rebase_path("//third_party/llvm-build/Release+Asserts/bin/clang++")
     clang_args = ""
-    if (false) {  # use_custom_libcxx
+    if (use_custom_libcxx) {
       # TODO(zcbenz): Following code makes native addons build with the custom
       # libcxx headers, but does not actually link with libcxx, and some addons
       # tests will fail with linking error.

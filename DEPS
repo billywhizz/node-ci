@@ -13,7 +13,7 @@ vars = {
   # Set to true to use deps bundled in node.
   'build_upstream_node': False,
 
-  'abseil_revision': '1b7ed5a1932647009b72fdad8e0e834d55cf40d8',
+  'abseil_revision': 'd2ea9f0eb1a31f0e5a0ab11837ed19333700ab4c',
   'abseil_url': 'https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp.git',
 
   'build_revision': '8d813a198cb6c99100b2a5eabddd5299a2195ebe',
@@ -37,7 +37,7 @@ vars = {
   'clang_revision': 'bbcb7c6c14fffe3274a20fb4c11e2cb933e0843e',
   'clang_url': 'https://chromium.googlesource.com/chromium/src/tools/clang.git',
 
-  'depot_tools_revision': '8f617b46176734ebd25b08ed4f2ab817e57c3a8a',
+  'depot_tools_revision': 'e1f9cd198136d743a1f004c9a5d94f280e9eb115',
   'depot_tools_url': 'https://chromium.googlesource.com/chromium/tools/depot_tools.git',
 
   # Fetch configuration files required for the 'use_remoteexec' gn arg
@@ -56,10 +56,10 @@ vars = {
   'fp16_revision': '98b0a46bce017382a6351a19577ec43a715b6835',
   'fp16_url': 'https://chromium.googlesource.com/external/github.com/Maratyszcza/FP16.git',
 
-  'googletest_revision': 'ff233bdd4cac0a0bf6e5cd45bda3406814cb2796',
+  'googletest_revision': 'a1e255a582377e1006bb88a408ac3f933ba7c916',
   'googletest_url': 'https://chromium.googlesource.com/external/github.com/google/googletest.git',
 
-  'icu_revision': '9408c6fd4a39e6fef0e1c4077602e1c83b15f3fb',
+  'icu_revision': '83a7bd47a345137ac6081c71c2a7158f5403cd30',
   'icu_url': 'https://chromium.googlesource.com/chromium/deps/icu.git',
 
   'jinja2_revision': '2f6f2ff5e4c1d727377f5e1b9e1903d871f41e74',
@@ -74,10 +74,10 @@ vars = {
   'trace_common_revision' : '148c806f46c0f8d2e5e888a8175b656ad4cfee43',
   'trace_common_url': 'https://chromium.googlesource.com/chromium/src/base/trace_event/common.git',
 
-  'v8_revision': '69138dd5a597edc8ed0f510d447aa8ed292db914',
+  'v8_revision': '3aabac39f79bbd39501146b0ea047f8e602c1d4a',
   'v8_url': 'https://chromium.googlesource.com/v8/v8.git',
 
-  'zlib_revision': 'd3aea2341cdeaf7e717bc257a59aa7a9407d318a',
+  'zlib_revision': 'fa9f14143c7938e6a1d18443900efee7a1e5e669',
   'zlib_url': 'https://chromium.googlesource.com/chromium/src/third_party/zlib.git',
 
   'reclient_version': 're_client_version:0.105.0.d6a0caf-gomaip',

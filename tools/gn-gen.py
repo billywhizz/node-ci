@@ -61,7 +61,6 @@ def GenerateBuildFiles(options):
   gn_args.append('symbol_level=%s' % (1 if options.debug else 0))
   gn_args.append('is_component_build=%s' % ToBool(options.shared))
   gn_args.append('node_use_node_code_cache=%s' % ToBool(not options.no_cache))
-  gn_args.append('node_enable_deprecated_declarations_warnings=true');
   gn_args.append('v8_imminent_deprecation_warnings=false');
 
   flattened_args = ' '.join(gn_args)

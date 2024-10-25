@@ -65,7 +65,8 @@ def GenerateBuildFiles(options):
   gn_args.append('v8_imminent_deprecation_warnings=false');
 
   flattened_args = ' '.join(gn_args)
-  args = ['gn', 'gen', options.out_dir, '-q', '--args=' + flattened_args]
+  gn_arg = 'gn.bat' if sys.platform == 'win32' else 'gn'
+  args = [gn_arg, 'gen', options.out_dir, '-q', '--args=' + flattened_args]
   print('\n'.join(gn_args))
   subprocess.check_call(args)
 
